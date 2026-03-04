@@ -1,0 +1,11 @@
+# Dockerfile   (example for a Python web app)
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY . .
+
+# Install your dependencies
+RUN pip install -r requirements.txt
+
+# Tell the container what to run
+CMD ["python", "app.py"]      # replace with your server’s entry point
